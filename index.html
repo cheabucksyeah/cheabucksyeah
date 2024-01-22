@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheabucks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ecf0f1; /* Hellblau */
+    }
+
+    header {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    img {
+      width: 50px; /* Just for example, adjust based on your icon size */
+    }
+
+    #main-content {
+      text-align: center;
+      padding: 2em;
+    }
+
+    button {
+      background-color: #2ecc71;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #34495e;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cheabucks</h1>
+    <img src="https://static.wikia.nocookie.net/fortnite/images/e/eb/V-Bucks_-_Icon_-_Fortnite.png" alt="V-Bucks Icon">
+  </header>
+  <section id="main-content">
+    <p>Welcome to Cheabucks, your source for the cheapest V-Bucks in the world!</p>
+    <button id="purchaseButton">Purchase V-Bucks</button>
+  </section>
+  <div class="buttons">
+    <a href="https:/ds.gg/cheabucks" target="_blank" id="discordButton"><button>Discord</button></a>
+    <a href="https://www.instagram.com/cheabucks" target="_blank" id="instagramButton"><button>Instagram</button></a>
+  </div>
+  <footer>
+    <p>&copy; 2024 Cheabucks</p>
+  </footer>
+  <script>
+    document.getElementById('purchaseButton').addEventListener('click', function() {
+      alert('Currently, you can only order on the Discord server!');
+    });
+  </script>
+</body>
+</html>
