@@ -18,6 +18,23 @@
       text-align: center;
     }
 
+    nav {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 2; /* Z-Index erhöht, um über anderen Elementen zu erscheinen */
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
     header {
       background-color: #3498db;
       color: #fff;
@@ -25,9 +42,7 @@
       padding: 1em 0;
       animation: fadeInDown 1s ease-out;
       width: 100%;
-      position: fixed;
-      top: 0;
-      z-index: 2; /* Z-Index erhöht, um über anderen Elementen zu erscheinen */
+      z-index: 1; /* Z-Index hinzugefügt */
     }
 
     @keyframes fadeInDown {
@@ -109,23 +124,6 @@
       text-decoration: none;
     }
 
-    nav {
-      background-color: #2c3e50;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      width: 100%;
-      position: fixed;
-      top: 40px;
-      z-index: 2; /* Z-Index erhöht, um über anderen Elementen zu erscheinen */
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
     footer {
       background-color: #34495e;
       color: #fff;
@@ -203,24 +201,22 @@
   </header>
   <section id="main-content">
     <p>Welcome to Cheabucks, your source for the cheapest V-Bucks in the world!</p>
-    <button id="purchaseButton">Purchase V-Bucks</button>
 
     <!-- Unterpunkte - Dienstleistungen -->
     <section id="services">
       <h2>Our Services</h2>
-      <p>We offer a range of services to meet your V-Bucks needs:</p>
       <ul>
         <li>Instant V-Bucks delivery</li>
         <li>24/7 customer support</li>
         <li>Competitive pricing</li>
         <li>Secure and reliable transactions</li>
       </ul>
+      <button id="purchaseButton">Purchase V-Bucks</button>
     </section>
 
     <!-- Unterpunkte - Weitere Informationen -->
     <section id="more-info">
       <h2>More Information</h2>
-      <p>Learn more about CheaBucks and why we are the right choice for your V-Bucks:</p>
       <ul>
         <li>Years of experience in the gaming industry</li>
         <li>Positive feedback from satisfied customers</li>
