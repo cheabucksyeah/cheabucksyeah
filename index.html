@@ -110,6 +110,7 @@
       width: 100%;
       position: fixed;
       top: 40px;
+      z-index: 1;
     }
 
     nav a {
@@ -143,13 +144,15 @@
     /* Neue Stile für Unterpunkte */
     #services,
     #more-info,
-    #pricing {
+    #pricing,
+    #social-media {
       margin-top: 80px;
     }
 
     #services,
     #more-info,
-    #pricing h2 {
+    #pricing,
+    #social-media h2 {
       font-size: 1.5em;
       color: #3498db;
       margin-bottom: 10px;
@@ -157,14 +160,16 @@
 
     #services,
     #more-info,
-    #pricing p {
+    #pricing,
+    #social-media p {
       font-size: 1.1em;
       margin-bottom: 20px;
     }
 
     #services ul,
     #more-info ul,
-    #pricing ul {
+    #pricing ul,
+    #social-media ul {
       list-style-type: none;
       padding: 0;
       text-align: center; /* Änderung auf "center" für die Aufzählpunkte */
@@ -172,8 +177,21 @@
 
     #services li,
     #more-info li,
-    #pricing li {
+    #pricing li,
+    #social-media li {
       margin-bottom: 10px;
+    }
+
+    /* Animation für Scroll-Effekt */
+    .fade-in-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -182,17 +200,18 @@
     <a href="#services">Our Services</a>
     <a href="#more-info">More Information</a>
     <a href="#pricing">Pricing</a>
+    <a href="#social-media">Social Media</a>
   </nav>
   <header>
     <h1>CheaBucks</h1>
     <img src="https://static.wikia.nocookie.net/fortnite/images/e/eb/V-Bucks_-_Icon_-_Fortnite.png" alt="V-Bucks Icon">
   </header>
-  <section id="main-content">
+  <section id="main-content" class="fade-in-scroll">
     <p>Welcome to Cheabucks, your source for the cheapest V-Bucks in the world!</p>
-    <button id="purchaseButton">Purchase V-Bucks</button>
+    <button id="purchaseButton" class="fade-in-scroll">Purchase V-Bucks</button>
 
     <!-- Unterpunkte - Dienstleistungen -->
-    <section id="services">
+    <section id="services" class="fade-in-scroll">
       <h2>Our Services</h2>
       <p>We offer a range of services to meet your V-Bucks needs:</p>
       <ul>
@@ -204,7 +223,7 @@
     </section>
 
     <!-- Unterpunkte - Weitere Informationen -->
-    <section id="more-info">
+    <section id="more-info" class="fade-in-scroll">
       <h2>More Information</h2>
       <p>Learn more about CheaBucks and why we are the right choice for your V-Bucks:</p>
       <ul>
@@ -216,7 +235,7 @@
     </section>
 
     <!-- Pricing-Bereich -->
-    <section id="pricing">
+    <section id="pricing" class="fade-in-scroll">
       <h2>Pricing</h2>
       <ul>
         <li>1,000 V-Bucks: $4.50</li>
@@ -224,8 +243,17 @@
         <li>13,500 V-Bucks: $35.00</li>
       </ul>
     </section>
+
+    <!-- Social Media -->
+    <section id="social-media" class="fade-in-scroll">
+      <h2>Social Media</h2>
+      <ul>
+        <li>Follow us on Discord: <a href="https://www.dc.gg/cheabucks" target="_blank">Discord</a></li>
+        <li>Follow us on Instagram: <a href="https://www.instagram.com/cheabucks" target="_blank">Instagram</a></li>
+      </ul>
+    </section>
   </section>
-  <div class="buttons">
+  <div class="buttons fade-in-scroll">
     <a href="https://www.dc.gg/cheabucks" target="_blank" id="discordButton"><button>Discord</button></a>
     <a href="https://www.instagram.com/cheabucks" target="_blank" id="instagramButton"><button>Instagram</button></a>
   </div>
@@ -233,6 +261,33 @@
     <p>&copy; 2024 Cheabucks</p>
   </footer>
   <script>
+    // Funktion zum Überprüfen, ob ein Element im Sichtfeld ist
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    // Funktion zum Hinzufügen der "active"-Klasse, wenn das Element im Sichtfeld ist
+    function addActiveClass() {
+      const elements = document.querySelectorAll('.fade-in-scroll');
+      elements.forEach(element => {
+        if (isInViewport(element)) {
+          element.classList.add('active');
+        }
+      });
+    }
+
+    // Event-Listener für das Scroll-Ereignis
+    document.addEventListener('scroll', addActiveClass);
+
+    // Initial überprüfen
+    addActiveClass();
+
     document.getElementById('purchaseButton').addEventListener('click', function() {
       alert('Currently, you can only order on the Discord server!');
     });
