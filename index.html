@@ -14,6 +14,8 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      align-items: center;
+      text-align: center;
     }
 
     header {
@@ -22,6 +24,9 @@
       text-align: center;
       padding: 1em 0;
       animation: fadeInDown 1s ease-out;
+      width: 100%;
+      position: fixed;
+      top: 0;
     }
 
     @keyframes fadeInDown {
@@ -102,6 +107,9 @@
       color: #fff;
       text-align: center;
       padding: 10px 0;
+      width: 100%;
+      position: fixed;
+      top: 40px;
     }
 
     nav a {
@@ -133,77 +141,37 @@
     }
 
     /* Neue Stile für Unterpunkte */
-    #services {
-      margin-top: 40px;
-      text-align: left; /* Änderung auf "left" für den Text */
-    }
-
-    #services h2 {
-      font-size: 1.5em;
-      color: #3498db;
-      margin-bottom: 10px;
-    }
-
-    #services p {
-      font-size: 1.1em;
-      margin-bottom: 20px;
-    }
-
-    #services ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center; /* Änderung auf "center" für die Aufzählpunkte */
-    }
-
-    #services li {
-      margin-bottom: 10px;
-      text-align: center; /* Änderung auf "center" für die Aufzählpunkte */
-    }
-
-    #more-info {
-      margin-top: 40px;
-      text-align: left; /* Änderung auf "left" für den Text */
-    }
-
-    #more-info h2 {
-      font-size: 1.5em;
-      color: #3498db;
-      margin-bottom: 10px;
-    }
-
-    #more-info p {
-      font-size: 1.1em;
-      margin-bottom: 20px;
-    }
-
-    #more-info ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center; /* Änderung auf "center" für die Aufzählpunkte */
-    }
-
-    #more-info li {
-      margin-bottom: 10px;
-      text-align: center; /* Änderung auf "center" für die Aufzählpunkte */
-    }
-
-    /* Neue Stile für den Pricing-Bereich */
+    #services,
+    #more-info,
     #pricing {
-      margin-top: 40px;
-      text-align: center;
+      margin-top: 80px;
     }
 
+    #services,
+    #more-info,
     #pricing h2 {
       font-size: 1.5em;
       color: #3498db;
       margin-bottom: 10px;
     }
 
+    #services,
+    #more-info,
+    #pricing p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    #services ul,
+    #more-info ul,
     #pricing ul {
       list-style-type: none;
       padding: 0;
+      text-align: center; /* Änderung auf "center" für die Aufzählpunkte */
     }
 
+    #services li,
+    #more-info li,
     #pricing li {
       margin-bottom: 10px;
     }
