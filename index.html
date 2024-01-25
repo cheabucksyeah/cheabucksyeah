@@ -6,10 +6,11 @@
   <title>CheaBucks</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ecf0f1; /* Hellblau */
+      background-color: #f1f2f6; /* Hellgrau */
+      color: #2c3e50; /* Dunkelgrau */
     }
 
     header {
@@ -21,10 +22,11 @@
 
     h1 {
       margin: 0;
+      font-size: 2em;
     }
 
     img {
-      width: 50px; /* Just for example, adjust based on your icon size */
+      width: 80px; /* Angepasste Größe für das Icon */
     }
 
     #main-content {
@@ -39,11 +41,22 @@
       font-size: 16px;
       cursor: pointer;
       margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #27ae60;
     }
 
     .buttons {
       text-align: center;
       margin-top: 20px;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     footer {
@@ -64,7 +77,7 @@
     <button id="purchaseButton">Purchase V-Bucks</button>
   </section>
   <div class="buttons">
-    <a href="https:/www.dc.gg/cheabucks" target="_blank" id="discordButton"><button>Discord</button></a>
+    <a href="https://www.dc.gg/cheabucks" target="_blank" id="discordButton"><button>Discord</button></a>
     <a href="https://www.instagram.com/cheabucks" target="_blank" id="instagramButton"><button>Instagram</button></a>
   </div>
   <footer>
