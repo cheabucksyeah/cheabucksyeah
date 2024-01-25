@@ -21,6 +21,18 @@
       color: #fff;
       text-align: center;
       padding: 1em 0;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1 {
@@ -36,6 +48,18 @@
       text-align: center;
       padding: 2em;
       flex: 1; /* Füllt den verfügbaren Platz aus */
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     button {
@@ -57,6 +81,16 @@
     .buttons {
       text-align: center;
       margin-top: 20px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     a {
@@ -68,6 +102,21 @@
       color: #fff;
       text-align: center;
       padding: 1em 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      animation: slideInUp 1s ease-out;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
